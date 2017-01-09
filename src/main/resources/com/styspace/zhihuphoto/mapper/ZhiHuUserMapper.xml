@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.styspace.zhihuphoto.mapper.ZhiHuUserMapper">
+
+	<insert id="insertUser" parameterType="com.styspace.zhihuphoto.pojo.ZhiHuUser">
+		INSERT INTO user(
+			trade,
+			sex,
+			company,
+			position,
+			education,
+			location,
+			userImg,
+			userToken,
+			username,
+			homePage,
+			answers,
+			articles,
+			questions,
+			collections,
+			followees,
+			followers,
+			followTips,
+			followColumns,
+			followQuestions,
+			followFavorites
+		)
+		VALUES(
+			#{trade},
+			#{sex},
+			#{company},
+			#{position},
+			#{education},
+			#{location},
+			#{userImg},
+			#{userToken},
+			#{username},
+			#{homePage},
+			#{answers},
+			#{articles},
+			#{questions},
+			#{collections},
+			#{followees},
+			#{followers},
+			#{followTips},
+			#{followColumns},
+			#{followQuestions},
+			#{followFavorites}
+		)		
+	</insert>
+	
+	<select id="isExits" parameterType="java.lang.String" resultType="java.lang.Integer">
+		SELECT COUNT(id)
+		FROM user
+		WHERE userToken = #{userToken}
+	</select>
+
+</mapper>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<!-- =================Dao层配置文件====================== -->
+
+	<!-- 扫描com.styspace.mallDemo包下所有标注@Repository的DAO组件 -->
+    <context:component-scan base-package="com.styspace.zhihuphoto.dao.mybatis"/>
+    <!-- 加载数据库登录连接的敏感信息 -->
+    <context:property-placeholder location="classpath:config/jdbc.properties" ignore-unresolvable="true"/>
+    
+    <!-- 数据源配置 -->
+    <bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close"
+	    p:driverClassName="${jdbc.driverClassName}"
+	    p:url="${jdbc.url}"
+	    p:username="${jdbc.username}"
+	    p:password="${jdbc.password}" />
+	
+	<!-- mybatis文件配置,读取mybatis配置文件,扫描所有mapper文件-->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- 不能加入，否则会报Mapped Statements collection already contains value for com.styspace.mapper.UserMapper.insertUser -->
+		<!-- <property name="configLocation" value="classpath:conf/mybatis-config.xml" /> -->
+		<property name="mapperLocations" value="classpath:com/styspace/zhihuphoto/mapper/*.xml" />
+	</bean>
+	
+	<!-- springh和mybatis整合， 扫描所有mapper接口-->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.styspace.zhihuphoto.mapper" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	</bean>
+</beans>
