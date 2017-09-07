@@ -5,7 +5,7 @@
  * feiniu.com Inc.Copyright (c) 2013-2015 All Rights Reserved.
  *
  */
-package com.styspace.zhihuphoto.utils;
+package com.styspace.zhihuphoto.utils.executor.zhihu;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -23,8 +23,8 @@ import com.styspace.zhihuphoto.dao.mybatis.IndexUrlDao;
 import com.styspace.zhihuphoto.dao.mybatis.ZhihuUserDao;
 import com.styspace.zhihuphoto.pojo.ZhiHuPage;
 import com.styspace.zhihuphoto.pojo.ZhiHuUser;
-import com.styspace.zhihuphoto.utils.parser.DetailPageParser;
-import com.styspace.zhihuphoto.utils.parser.FollowingListPageParser;
+import com.styspace.zhihuphoto.utils.parser.zhihu.DetailPageParser;
+import com.styspace.zhihuphoto.utils.parser.zhihu.FollowingListPageParser;
 
 /**
  * @ClassName ParseTask

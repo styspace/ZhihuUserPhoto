@@ -32,6 +32,15 @@ public class StartController extends BaseController{
 	@Autowired
 	protected StartService startService;
 	
+	/**
+	 * 获取验证码并开始爬取数据
+	* @Title: getPhoto 
+	* @Description: TODO
+	* @param @param captch
+	* @param @return 
+	* @return Object 
+	* @throws
+	 */
 	@ResponseBody
 	@POST
 	@RequestMapping(value="/getPhoto", method=RequestMethod.POST)

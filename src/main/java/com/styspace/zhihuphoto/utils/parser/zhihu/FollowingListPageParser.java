@@ -5,7 +5,7 @@
  * feiniu.com Inc.Copyright (c) 2013-2015 All Rights Reserved.
  *
  */
-package com.styspace.zhihuphoto.utils.parser;
+package com.styspace.zhihuphoto.utils.parser.zhihu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.styspace.zhihuphoto.pojo.ZhiHuPage;
+import com.styspace.zhihuphoto.utils.parser.Parser;
 
 /**
  * @ClassName FollowingListPageParser

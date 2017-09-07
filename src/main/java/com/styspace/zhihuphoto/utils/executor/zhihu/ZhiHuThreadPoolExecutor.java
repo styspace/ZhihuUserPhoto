@@ -5,7 +5,7 @@
  * feiniu.com Inc.Copyright (c) 2013-2015 All Rights Reserved.
  *
  */
-package com.styspace.zhihuphoto.utils;
+package com.styspace.zhihuphoto.utils.executor.zhihu;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;

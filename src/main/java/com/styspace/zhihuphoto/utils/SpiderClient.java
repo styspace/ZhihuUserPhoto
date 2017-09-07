@@ -16,7 +16,12 @@ import org.springframework.stereotype.Component;
 
 import com.styspace.zhihuphoto.dao.mybatis.IndexUrlDao;
 import com.styspace.zhihuphoto.dao.mybatis.ZhihuUserDao;
-import com.styspace.zhihuphoto.utils.executor.ThreadPoolMonitor;
+import com.styspace.zhihuphoto.utils.executor.zhihu.DownloadTask;
+import com.styspace.zhihuphoto.utils.executor.zhihu.ParseTask;
+import com.styspace.zhihuphoto.utils.executor.zhihu.ThreadPoolMonitor;
+import com.styspace.zhihuphoto.utils.executor.zhihu.ZhiHuThreadPoolExecutor;
+import com.styspace.zhihuphoto.utils.zhihu.LoginUtils;
+import com.styspace.zhihuphoto.utils.zhihu.ZhiHuHttpClient;
 
 
 /**

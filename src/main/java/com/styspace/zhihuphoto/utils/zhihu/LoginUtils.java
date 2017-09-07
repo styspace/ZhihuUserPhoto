@@ -5,7 +5,7 @@
  * feiniu.com Inc.Copyright (c) 2013-2015 All Rights Reserved.
  *
  */
-package com.styspace.zhihuphoto.utils;
+package com.styspace.zhihuphoto.utils.zhihu;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -25,6 +25,7 @@ import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson.JSONObject;
 import com.styspace.zhihuphoto.pojo.ZhiHuPage;
+import com.styspace.zhihuphoto.utils.SpiderClient;
 
 /**
  * @ClassName LoginUtils
@@ -51,12 +52,13 @@ public class LoginUtils {
 	@Value("${loginGifUrl}")
 	private String loginGifUrl; //登录验证码获取地址
 	
-	
+	// 验证码地址
 	public String getCaptchPic() {	
 		// 验证码图片
 		return loginGifUrl;
 	}
 	
+	// 登录
 	public boolean login(ZhiHuHttpClient zhiHuHttpClient, String captch) {
 		boolean isLogin = false;
 		

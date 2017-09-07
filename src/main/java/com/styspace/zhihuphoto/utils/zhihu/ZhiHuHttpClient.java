@@ -5,7 +5,7 @@
  * feiniu.com Inc.Copyright (c) 2013-2015 All Rights Reserved.
  *
  */
-package com.styspace.zhihuphoto.utils;
+package com.styspace.zhihuphoto.utils.zhihu;
 
 
 import org.apache.http.client.CookieStore;

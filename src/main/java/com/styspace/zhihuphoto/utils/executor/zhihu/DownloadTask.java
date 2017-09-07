@@ -5,7 +5,7 @@
  * feiniu.com Inc.Copyright (c) 2013-2015 All Rights Reserved.
  *
  */
-package com.styspace.zhihuphoto.utils;
+package com.styspace.zhihuphoto.utils.executor.zhihu;
 
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.HttpGet;
@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import com.styspace.zhihuphoto.dao.mybatis.IndexUrlDao;
 import com.styspace.zhihuphoto.dao.mybatis.ZhihuUserDao;
 import com.styspace.zhihuphoto.pojo.ZhiHuPage;
+import com.styspace.zhihuphoto.utils.zhihu.ZhiHuHttpClient;
 
 /**
  * @ClassName DownloadTask

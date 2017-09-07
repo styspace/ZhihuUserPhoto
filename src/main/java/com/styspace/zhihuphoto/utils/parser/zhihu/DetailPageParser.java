@@ -5,7 +5,7 @@
  * feiniu.com Inc.Copyright (c) 2013-2015 All Rights Reserved.
  *
  */
-package com.styspace.zhihuphoto.utils.parser;
+package com.styspace.zhihuphoto.utils.parser.zhihu;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.styspace.zhihuphoto.pojo.ZhiHuUser;
+import com.styspace.zhihuphoto.utils.parser.Parser;
 
 /**
  * @ClassName DetailPageParser
